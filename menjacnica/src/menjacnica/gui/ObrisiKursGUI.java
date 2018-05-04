@@ -43,7 +43,7 @@ public class ObrisiKursGUI extends JFrame {
 	private JCheckBox chckbxZaistaObrisiKurs;
 	private JLabel label;
 	
-	private MenjacnicaGUI glavniProzor;
+	//private MenjacnicaGUI glavniProzor;
 	private Valuta valuta;
 
 	/**
@@ -77,7 +77,7 @@ public class ObrisiKursGUI extends JFrame {
 		contentPane.add(getBtnOdus());
 		
 		//podesavanje
-		this.glavniProzor = glavniProzor;
+		//this.glavniProzor = glavniProzor;
 		this.valuta = valuta;
 		
 		prikaziValutu();
@@ -179,6 +179,7 @@ public class ObrisiKursGUI extends JFrame {
 			btnDodaj.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.obrisiValutu(valuta);
+					dispose();
 				}
 			});
 			btnDodaj.setEnabled(false);
